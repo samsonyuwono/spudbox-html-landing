@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 17px;
   color: black;
   line-height: 1.6;
@@ -27,6 +27,7 @@ body {
 .showcase h1 {
   font-size: 50px;
   line-height: 1.2;
+  font-weight: bolder;
 }
 
 .showcase p {
