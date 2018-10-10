@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 17px;
   color: black;
   line-height: 1.6;
@@ -43,10 +43,15 @@ body {
   border: white 1px solid;
   padding: 10px 20px;
   border-radius: 10px;
-  margin-top: 20px;
+  cursor: pointer;
 }
 
-.showcase button:hover {
-  background: red;
-  color: white;
+#mc_embed_signup {
+  margin-top: 20px;
+  background: none !important;
+}
+
+#mc_embed_signup .button {
+  font-size: 18px !important;
+  text-decoration: none !important;
 }
