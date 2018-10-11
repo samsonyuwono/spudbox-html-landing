@@ -24,6 +24,11 @@ body {
   padding: 0 20px;
 }
 
+.header-wrapper {
+  background: rgb(255, 255, 255, 0.7);
+  padding: 20px;
+}
+
 .showcase h1 {
   font-size: 12vw;
   line-height: 1.2;
@@ -32,11 +37,12 @@ body {
 }
 
 .showcase img {
-  margin-bottom: 28px;
+  margin-bottom: 14px;
 }
 
 .showcase .value-prop {
   font-size: 17px;
+  margin-top: 18px;
 }
 
 .copyright {
@@ -74,4 +80,13 @@ body {
   font-size: 18px !important;
   font-family: "Poppins", sans-serif;
   text-decoration: none !important;
+  background-color: #ff1c20 !important;
+}
+#mc_embed_signup .button:hover {
+  background-color: none;
+}
+
+.social {
+  float: right;
+  cursor: pointer;
 }
