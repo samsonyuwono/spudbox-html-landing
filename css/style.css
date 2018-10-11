@@ -36,10 +36,6 @@ body {
   color: #ff1c20;
 }
 
-.showcase img {
-  margin-bottom: 14px;
-}
-
 .showcase .value-prop {
   font-size: 17px;
   margin-top: 18px;
@@ -69,6 +65,7 @@ body {
 }
 
 #mc_embed_signup label {
+  font-size: 21px !important;
   font-family: "Poppins", sans-serif;
 }
 
@@ -89,4 +86,10 @@ body {
 .social {
   float: right;
   cursor: pointer;
+  display: inline-flex;
+  font-size: 14px;
+}
+
+.social p {
+  margin-right: 5px;
 }
