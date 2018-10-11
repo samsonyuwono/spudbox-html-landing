@@ -25,13 +25,23 @@ body {
 }
 
 .showcase h1 {
-  font-size: 50px;
+  font-size: 12vw;
   line-height: 1.2;
   font-weight: bolder;
+  color: #ff1c20;
 }
 
-.showcase p {
-  font-size: 20px;
+.showcase img {
+  margin-bottom: 28px;
+}
+
+.showcase .value-prop {
+  font-size: 17px;
+}
+
+.copyright {
+  font-size: 10px;
+  float: left;
 }
 
 .showcase input {
@@ -52,7 +62,16 @@ body {
   background: none !important;
 }
 
+#mc_embed_signup label {
+  font-family: "Poppins", sans-serif;
+}
+
+#mc_embed_signup input.email {
+  font-family: "Poppins", sans-serif;
+}
+
 #mc_embed_signup .button {
   font-size: 18px !important;
+  font-family: "Poppins", sans-serif;
   text-decoration: none !important;
 }
