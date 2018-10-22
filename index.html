@@ -14,7 +14,7 @@
     <img src="./images/chips-bag-128.png" alt="chips bag">
     <h1>SpudBox</h1>
     <p class="value-prop">
-      A curated monthly subscription box of snack chips <br>from all over the world delivered straight to your door
+      Discover a curated box of snack chips from all over the world in a<br> monthly subscription box delivered straight to your door or office
   </p>
 
   <!-- Begin Mailchimp Signup Form -->
@@ -28,11 +28,24 @@
 <div id="mc_embed_signup">
 <form action="https://spudbox.us19.list-manage.com/subscribe/post?u=7d42ba98ed6ae247e9b70f685&amp;id=f571be3f1a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
-	<label for="mce-EMAIL">Interested? Sign up below to receive updates</label>
+	<label for="mce-EMAIL">Interested? Sign up below to receive updates when we launch</label>
 	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Type your email here" required>
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7d42ba98ed6ae247e9b70f685_f571be3f1a" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <div class="buy">
+      <form action="your-server-side-code" method="POST">
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_Wb8seITyBsMFvRIn1FHR2pBI"
+          data-amount="1299"
+          data-name="SpudBox"
+          data-description="Charge for box"
+          data-image=""
+          data-locale="auto"
+          data-zip-code="true"
+          data-currency="usd">
+        </script>
+      </form>
     </div>
 </form>
 </div>
@@ -43,7 +56,9 @@
 </div>
 <div class="social">
   <p>Follow us</p>
-  <img src="/images/instagram.png" alt="instagram">
+  <a href="https://www.instagram.com/spudbox2018/">
+    <img src="/images/instagram.png" alt="instagram">
+  </a>
 </div>
 
 

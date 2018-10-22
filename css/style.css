@@ -38,6 +38,7 @@ body {
 
 .showcase .value-prop {
   font-size: 17px;
+  font-weight: 600;
   margin-top: 18px;
 }
 
@@ -78,6 +79,7 @@ body {
   font-family: "Poppins", sans-serif;
   text-decoration: none !important;
   background-color: #ff1c20 !important;
+  transition: unset !important;
 }
 #mc_embed_signup .button:hover {
   background-color: none;
@@ -92,4 +94,8 @@ body {
 
 .social p {
   margin-right: 5px;
+}
+
+.buy button {
+  padding: 0;
 }
