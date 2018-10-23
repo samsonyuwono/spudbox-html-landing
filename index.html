@@ -34,14 +34,14 @@
       <form action="your-server-side-code" method="POST">
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="process.dev.env.STRIPE_PUBLICs"
-          data-amount="1299"
+          data-key="{{process.env.STRIPE_PUBLIC}}"
+          data-amount="{{process.env.STRIPE_COST}}"
           data-name="SpudBox"
           data-description="Charge for box"
-          data-label="Subsribe"
+          data-label="Subscribe"
           data-locale="auto"
-          data-zip-code="true"
-          data-currency="usd">
+          data-currency="{{process.env.STRIPE_CCY}}"
+          data-zip-code="true">
         </script>
       </form>
     </div>
