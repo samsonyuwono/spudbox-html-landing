@@ -1,6 +1,6 @@
 const path = require("path");
 const express = require("express");
-const bodyParser = require("body-praser");
+const bodyParser = require("body-parser");
 const hbs = require("express-hbs");
 const dotenv = require("dotenv");
 
@@ -29,14 +29,12 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.post("/charge", (req, res, next) => {
-  charge(req)
-    .then(data => {
-      res.render("thanks");
-    })
-    .catch(error => {
-      res.render("error", erro);
-    });
+app.post('/confirmation', (req, res, next) => {
+  charge(req).then(data => {
+    res.render('confirmation');
+  }).catch(error => {
+    res.render('error', error);
+  });
 });
 
 app.listen(process.env.port || 3000, () => {

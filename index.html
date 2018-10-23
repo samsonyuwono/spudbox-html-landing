@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="./public/style.css">
   <title>SpudBox</title>
-  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="public/favicon.png">
 </head>
 <body>
   <header class="showcase">
     <div class="header-wrapper">
-    <img src="./images/chips-bag-128.png" alt="chips bag">
+    <img src="/public/chips-bag-128.png" alt="chips bag">
     <h1>SpudBox</h1>
     <p class="value-prop">
       Discover a curated box of snack chips from all over the world in a<br> monthly discovery box delivered straight to your door or office
@@ -20,17 +20,18 @@
     <div class="buy">
       <h2>Interested? Sign up below to get your first box</h2>
 
-      <form action="your-server-side-code" method="POST">
+      <form action="/charge" method="POST">
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="{{process.env.STRIPE_PUBLIC}}"
-          data-amount="{{process.env.STRIPE_COST}}"
+          data-key="pk_live_D66uoz47U2vQi5OeV9ahO430"
+          data-amount="1299"
           data-name="SpudBox"
           data-description="Charge for box"
           data-label="Subscribe"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
           data-locale="auto"
           data-zip-code="true"
-          data-currency="{{process.env.STRIPE_CCY}}">
+          data-currency="usd">
         </script>
       </form>
     </div>
@@ -42,7 +43,7 @@
 <div class="social">
   <p>Follow us</p>
   <a href="https://www.instagram.com/spudbox2018/">
-    <img src="/images/instagram.png" alt="instagram">
+    <img src="/public/instagram.png" alt="instagram">
   </a>
 </div>
 

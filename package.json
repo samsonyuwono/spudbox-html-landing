@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "now": {
+    "alias": "stripe-demo.isthe.link"
+  },
   "scripts": {
-    "test": "\"NODE_ENV=production node app.js\""
+    "start": "NODE_ENV=production node app.js"
   },
   "repository": {
     "type": "git",

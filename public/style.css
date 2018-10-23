@@ -12,7 +12,7 @@ body {
 }
 
 .showcase {
-  background-image: url("../images/scattered_chips.jpg");
+  background-image: url("../public/scattered_chips.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
