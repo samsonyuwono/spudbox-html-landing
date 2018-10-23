@@ -47,20 +47,7 @@ body {
   float: left;
 }
 
-.showcase input {
-}
-
-.showcase button {
-  font-size: 18px;
-  text-decoration: none;
-  color: black;
-  border: white 1px solid;
-  padding: 10px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-#mc_embed_signup {
+/* #mc_embed_signup {
   margin-top: 20px;
   background: none !important;
 }
@@ -83,7 +70,7 @@ body {
 }
 #mc_embed_signup .button:hover {
   background-color: none;
-}
+} */
 
 .social {
   float: right;
@@ -96,6 +83,9 @@ body {
   margin-right: 5px;
 }
 
+.buy {
+  margin-top: 1vh;
+}
 .buy button {
   padding: 0;
 }
