@@ -3,14 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const hbs = require("express-hbs");
 const dotenv = require("dotenv");
-
-const envfile = process.env.NODE_ENV === "production" ? ".env" : ".dev.env";
-dotenv.config({
-  silent: true,
-  path: `${__dirname}/${envfile}`
-});
-
-const charge = require("./charge");
+var stripe = require("stripe")(process.env.STRIPE_SECRET);
 
 const app = express();
 
@@ -29,12 +22,27 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.post('/confirmation', (req, res, next) => {
-  charge(req).then(data => {
-    res.render('confirmation');
-  }).catch(error => {
-    res.render('error', error);
-  });
+app.get("/charge", (req, res) => {
+  res.render("confirmation", {});
+});
+
+app.post("/charge", (req, res) => {
+  var token = req.body.stripeToken;
+  var chargeAmount = req.body.chargeAmount;
+  var charge = stripe.charges.create(
+    {
+      amount: chargeAmount,
+      currency: "usd",
+      source: token
+    },
+    function(err, charge) {
+      if (err & (err.type === "StripeCardError")) {
+        console.log("Your card was declined");
+      }
+    }
+  );
+  console.log("Your payment was successful!");
+  res.redirect("/charge");
 });
 
 app.listen(process.env.port || 3000, () => {

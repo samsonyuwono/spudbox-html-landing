@@ -1,13 +1,13 @@
-var stripe = require("stripe")(process.env.STRIPE_SECRET);
+var stripe = require("stripe")("sk_test_NdlrA7E4PnBOUVu4elDlZe8m");
 
 module.export = req => {
   const token = req.body.stripeToken;
 
   return stripe.charges.create({
-    amount: parseInt(process.env.STRIPE_COST, 10),
-    currency: process.env.STRIPE_CCY,
+    amount: 1299,
+    currency: "usd",
     source: token,
-    description: "Subscription to Spudbox",
-    metadata: {}
+    capture: false,
+    description: "Subscription to Spudbox"
   });
 };
