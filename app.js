@@ -9,12 +9,11 @@ const app = express();
 
 app.engine("html", hbs.express3({ extname: ".html" }));
 app.set("view engine", "html");
-app.set("views", __dirname);
 app.disable("x-powered-by");
 
 app.locals.process = process;
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname + "/public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
