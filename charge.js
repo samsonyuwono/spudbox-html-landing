@@ -1,10 +1,10 @@
-var stripe = require("stripe")("sk_test_NdlrA7E4PnBOUVu4elDlZe8m");
+var stripe = require("stripe")(process.env.STRIPE_SECRET);
 
 module.export = req => {
   const token = req.body.stripeToken;
 
   return stripe.charges.create({
-    amount: 1299,
+    amount: 1599,
     currency: "usd",
     source: token,
     capture: false,

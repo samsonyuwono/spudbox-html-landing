@@ -3,8 +3,12 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const hbs = require("express-hbs");
 const dotenv = require("dotenv");
-var stripe = require("stripe")(process.env.STRIPE_SECRET);
 
+const stripe = process.env.NODE_ENV === "production" ? ".env" : ".dev.env";
+dotenv.config({
+  silent: true,
+  path: `${__dirname}/${envfile}`
+});
 const app = express();
 
 app.engine("html", hbs.express3({ extname: ".html" }));
@@ -34,7 +38,7 @@ app.post("/charge", (req, res) => {
       currency: "usd",
       source: token
     },
-    function(err, charge) {
+    (err, charge) => {
       if (err & (err.type === "StripeCardError")) {
         console.log("Your card was declined");
       }
